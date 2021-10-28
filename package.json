@@ -1,0 +1,20 @@
+{
+  "name": "JS-Small-Projects",
+  "version": "1.0.0",
+  "description": "",
+  "main": "romanToNumber.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lnxdxtf/JS-Small-Projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lnxdxtf/JS-Small-Projects/issues"
+  },
+  "homepage": "https://github.com/lnxdxtf/JS-Small-Projects#readme"
+}
