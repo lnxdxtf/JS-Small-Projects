@@ -87,42 +87,6 @@ app.get('/api/users',(req,res)=>{
 
 
 
-// app.get('/api/users/:_id/logs?[from][&to][&limit]', (req,res)=>{
-//   const userId = req.params._id
-//   const {from, to, limit} = req.query
-//   User.findById(userId, (err,data)=>{
-//     if(!data){
-//       res.send("Unknown userId")
-//     }else{
-//       const username = data.username
-//       console.log({"from":from, "to":to, "limit":limit})
-//       Exercise.find(userId, {date:{$gte: new Date(from), $lte: new Date(to)}}).select(["id","description", "duration", "date"]).limit(+limit).exec( (err,data)=>{
-//         let customdata = data.map(exer => {
-//           let dateFormatted = new Date(exer.date).toDateString()
-//           return {id: exer.id, description:exer.description, duration:exer.duration, date:dateFormatted}
-//         })
-//         if (!data){
-//           res.json({
-//             "userId": userId,
-//             "username": username,
-//             "count": 0,
-//             "log":[]})
-//         }else{
-//           res.json({
-//             "userId": userId,
-//             "username": username,
-//             "count": data.lenght,
-//             "log": customdata})
-//         }
-//       })
-//     }
-//   })
-// }) 
-
-
-
-
-
 const listener = app.listen(process.env.PORT || 3000, () => {
   console.log('Your app is listening on port ' + listener.address().port)
 })
