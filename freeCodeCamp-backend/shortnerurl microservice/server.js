@@ -31,7 +31,6 @@ app.get('/', function(req, res) {
 // Your first API endpoint
 app.post('/api/shorturl', async(req, res) => {
   let bodyurl = req.body.url
-  console.log("HTTPS-POST-201")
   console.log(bodyurl)
   const validator = dns.lookup(urlparser.parse(bodyurl).hostname, (error, address)=>{
     if(!address) {
@@ -39,6 +38,7 @@ app.post('/api/shorturl', async(req, res) => {
     }else{
       const url = new Url({url: bodyurl})
       url.save((err,data)=>{
+        console.log("HTTPS-POST-201")
         res.json({
           original_url:data.url,
           short_url: data.id
