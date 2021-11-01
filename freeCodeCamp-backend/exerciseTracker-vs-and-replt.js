@@ -38,6 +38,7 @@ app.post('/api/users', (req,res)=>{
     res.json({username: data.username, "_id":data.id })
     console.log("Usuário: ", data.username, " criado")
     console.log("Id do usuário: ", data.id)
+    console.log("================")
     }
   })
 })
@@ -71,7 +72,6 @@ app.post('/api/users/:_id/exercises', (req,res)=>{
 
 
 
-
 app.get('/api/users',(req,res)=>{
   User.find({},(err,data)=>{
     if(!data){
@@ -81,7 +81,6 @@ app.get('/api/users',(req,res)=>{
     }
   })
 })
-
 
 
 
